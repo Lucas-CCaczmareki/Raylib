@@ -1,0 +1,30 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Executar Jogo (Raylib)",
+            "type": "cppdbg",
+            "request": "launch",
+            // 1. Seu Makefile cria o 'jogo.exe' na pasta principal.
+            "program": "${workspaceFolder}/jogo.exe",
+            "args": [],
+            "stopAtEntry": false,
+            // 2. O programa vai rodar a partir da pasta principal.
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            // 3. O caminho para o seu depurador do w64devkit.
+            "miDebuggerPath": "C:\\Development\\w64devkit\\bin\\gdb.exe",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            // 4. Executa a tarefa 'build-raylib-game' do tasks.json antes de rodar.
+            "preLaunchTask": "build-raylib-game"
+        }
+    ]
+}

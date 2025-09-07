@@ -1,0 +1,20 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build-raylib-game",
+            "type": "shell",
+            // O comando para compilar seu jogo.
+            // Se 'make' não funcionar sozinho, troque por 'mingw32-make'.
+            "command": "make",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "detail": "Compila o jogo Raylib usando o Makefile."
+        }
+    ]
+}
